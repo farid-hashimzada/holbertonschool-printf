@@ -13,6 +13,7 @@
 
 void print_string(va_list ptr, int *len)
 {
+	int el = 0;
 	char *str = va_arg(ptr, char*);
 
 	if (str == NULL)
@@ -21,7 +22,11 @@ void print_string(va_list ptr, int *len)
 	}
 	else
 	{
-		write(1, str, strlen(str));
-		(*len) += strlen(str);
+		while(str[el])
+		{
+			el++;
+		}
+		write(1, str, el);
+		(*len) += el;
 	}
 }
