@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <unisted.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
 
