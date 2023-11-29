@@ -1,0 +1,8 @@
+#!/bin/bash
+zor(){
+    chmod 777 $b
+    git add .
+    git commit -m "a"
+    git push print Murad
+}
+zor $1
