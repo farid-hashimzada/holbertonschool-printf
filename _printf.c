@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <unistd.h>
+#include <unisted.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 				print_char(ptr, &len);
 			if (format[i + 1] == 's')
-				print_string(ptr, &len);
+				print_string(ptr, len);
 			else if (format[i + 1] == '\0')
 				continue;
 			else
