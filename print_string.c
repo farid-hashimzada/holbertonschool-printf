@@ -22,7 +22,7 @@ void print_string(va_list ptr, int *len)
 	}
 	else
 	{
-		while(str[el])
+		while (str[el])
 		{
 			el++;
 		}

@@ -6,7 +6,7 @@
  * @ptr: argument
  * @len: size
  *
- * Return: 
+ * Return:
  *
  */
 
