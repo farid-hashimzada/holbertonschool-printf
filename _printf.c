@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 				print_char(ptr, &len);
 			if (format[i + 1] == 's')
-				print_char(ptr, len);
+				print_string(ptr, &len);
 			else if (format[i + 1] == '\0')
 				continue;
 			else
