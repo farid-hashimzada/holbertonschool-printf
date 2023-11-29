@@ -18,7 +18,7 @@ void print_string(va_list ptr, int *len)
 
 	if (str == NULL)
 	{
-		write(1, "(null)", 6);
+		(*len) += write(1, "(null)", 6);
 	}
 	else
 	{
