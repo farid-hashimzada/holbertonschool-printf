@@ -29,8 +29,10 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == 's')
 				print_string(ptr, &len);
 			else if (format[i + 1] == '%')
+			{
 				_putchar('%');
 				len++;
+			}
 			else if (format[i + 1] == '\0')
 				continue;
 			else
