@@ -7,5 +7,9 @@
  */
 int printf_(char *format, ...)
 {
-
+    va_list args;
+    int length = 0;
+    va_start(args,format);
+    if (format == NULL)
+    exit(98);
 }
