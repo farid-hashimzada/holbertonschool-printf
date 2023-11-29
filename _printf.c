@@ -22,13 +22,16 @@ int _printf(const char *format, ...)
 		exit(98);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i++] == '%')
+		if (format[i+] == '%')
 		{
-			if (format[i] == 'c')
+			if (format[i + 1] == 'c')
 				print_char(ptr, &len);
-			else if (format[i] == 's')
+			else if (format[i + 1] == 's')
 				print_string(ptr, &len);
-			else if (format[i] == '\0')
+			else if (format[i + 1] == '%')
+				_putchar('%');
+				len++;
+			else if (format[i + 1] == '\0')
 				continue;
 			else
 			{
