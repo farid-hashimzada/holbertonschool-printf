@@ -28,6 +28,10 @@ int _printf(const char *format, ...)
 				print_char(ptr, &len);
 			else if (format[i + 1] == 's')
 				print_string(ptr, &len);
+			else if (format[i + 1] == 'd' || format[i + 1] == 'i')
+			{
+				print_decimal(va_arg(args, int));
+			}
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
