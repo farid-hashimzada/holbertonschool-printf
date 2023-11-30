@@ -17,7 +17,8 @@ while (a > 1)
 {
 b = a / i;
 a = a % i;
-print_char(b + 48);
+char c = b + 48;
+write(1, &c, 1);
 i /= 10;
 }
 }
