@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 			{
 				len+=print_decimal(va_arg(ptr, int));
+				len++;
 			}
 			else if (format[i + 1] == '%')
 			{
