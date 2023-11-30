@@ -12,10 +12,10 @@ int printf_(char *format, ...)
         if(*format == '%'){
             format++;
             if(*format == 'c'){
-                //if(va_arg(args,char) != '\0'){
-                print_char(va_arg(args,int));
-                length++;
-                //}
+                if(va_arg(args,int) != '\0'){
+                    print_char(va_arg(args,int));
+                    length++;
+                }
             }
             else if(*format == 's'){
                 print_string(va_arg(args,char*));
