@@ -7,7 +7,7 @@
 void print_decimal(int a){
 int i = 1;
 int b = a;
-while((b / i) > 10)
+while ((b / i) > 10)
 {
 i *= 10;
 }
