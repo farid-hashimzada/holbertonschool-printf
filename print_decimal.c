@@ -17,7 +17,6 @@ if(a<0){
     write(1, &negative, 1);
     a = a * (-1);
     b = b * (-1);
-    result++;
 }
 while ((b / i) >= 10)
 {
