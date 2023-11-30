@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				print_string(ptr, &len);
 			else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 			{
-				print_decimal(va_arg(ptr, int));
+				print_decimal(va_arg(ptr, &len));
 			}
 			else if (format[i + 1] == '%')
 			{
