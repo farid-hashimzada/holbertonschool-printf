@@ -16,11 +16,11 @@ int printf_(char *format, ...)
         if(*format == '%'){
             format++;
             if(*format == 'c'){
-                print_char(va_arg(args,char*));
+                print_char(va_arg(args,char));
                 length++;
             }
             else if(*format == 's'){
-                print_string(va_arg(args,char*));
+                print_string(va_arg(args,char));
                 length++;
             }
             else{
