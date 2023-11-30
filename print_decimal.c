@@ -32,5 +32,5 @@ while(len>0){
     i=i/10;
     len--;
 }
-return (len);
+return (result);
 }
