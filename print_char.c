@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * print_char - print char
@@ -6,5 +7,5 @@
  */
 
 void print_char(char c){
-    putchar(c);
+    write(1, &c, 1);
 }
