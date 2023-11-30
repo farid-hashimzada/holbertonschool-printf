@@ -8,7 +8,7 @@
  * @ptr: Pointer to the va_list containing the string
  * @len: Pointer to the length counter
  */
-void print_decimal(int a){
+int print_decimal(int a){
 int i = 1, len = 1;
 int b = a;
 char c;
@@ -31,4 +31,5 @@ while(len>0){
     i=i/10;
     len--;
 }
+return (len);
 }
