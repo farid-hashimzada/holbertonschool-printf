@@ -1,9 +1,11 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
+
 /**
  * print_decimal - print decimal
  * @a: a
  */
+
 void print_decimal(int a){
 int i = 1;
 int b = a;
