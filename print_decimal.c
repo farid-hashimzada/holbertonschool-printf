@@ -7,28 +7,27 @@
  * @ptr: Pointer to the va_list containing the string
  * @len: Pointer to the length counter
  */
-void print_decimal(va_list ptr, int *len)
+void print_decimal(int a){
+int i = 1, len = 1;
+int b = a;
+char c;
+if(a<0){
+    char negative = '-';
+    write(1, &negative, 1);
+    a = a * (-1);
+    b = b * (-1);
+}
+while ((b / i) >= 10)
 {
-	unsigned int i = 1;
-	int number = va_arg(ptr, int);
-
-	if (number < 0)
-	{
-		number = -number;
-		(*len)++;
-		_putchar('-');
-	}
-	while ((number / i) / 10 != 0)
-	{
-		i = i * 10;
-		(*len)++;
-	}
-	for (; i != 1; i /= 10)
-	{
-		_putchar((number / i) + '0');
-		number = number % i;
-	}
-
-	(*len)++;
-	_putchar((number % 10) + '0');
+i *= 10;
+len++;
+}
+while(len>0){
+    b = a/i;
+    b = b%10;
+    c = b + 48;
+    write(1, &c, 1);
+    i=i/10;
+    len--;
+}
 }
