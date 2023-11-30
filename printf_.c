@@ -23,7 +23,7 @@ int printf_(char *format, ...)
             }
             else{
                 print_char('%');
-                length+=2;
+                length++;
             }
         }
         else{
