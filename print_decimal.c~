@@ -1,0 +1,11 @@
+#include <stdio.h>
+/**
+ * print_decimal - print decimal
+ * @a: a
+ */
+void print_decimal(int a){
+int i;
+int b = a; 
+for (i = 10 ; (b / i) > 1; i *= 10)
+printf("%d", i);
+}
