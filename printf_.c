@@ -1,10 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
-/**
- * printf_ - print 
- *  @format: format
- * Result - length of the output
- */
 int printf_(char *format, ...)
 {
     va_list args;
@@ -16,16 +9,17 @@ int printf_(char *format, ...)
         if(*format == '%'){
             format++;
             if(*format == 'c'){
-                print_char(va_arg(args,char));
+                //if(va_arg(args,char) != '\0'){
+                print_char(va_arg(args,int));
                 length++;
+                //}
             }
             else if(*format == 's'){
-                print_string(va_arg(args,char));
+                print_string(va_arg(args,char*));
                 length++;
             }
             else{
                 print_char('%');
-                print_char(*format);
                 length+=2;
             }
         }
