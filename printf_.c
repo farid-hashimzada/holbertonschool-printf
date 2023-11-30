@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
 int printf_(char *format, ...)
 {
     va_list args;
