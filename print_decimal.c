@@ -10,13 +10,14 @@
  */
 int print_decimal(int a){
 int i = 1, len = 1,result=0;
-unsigned b = a;
+unsigned int b = a;
+unsigned int d = a;
 char c;
 if(a<0){
     char negative = '-';
     write(1, &negative, 1);
-    a = a * (-1);
-    b = b * (-1);
+    d = d * (-1);
+    b =b * (-1);
     result++;
 }
 while ((b / i) >= 10)
@@ -26,7 +27,7 @@ len++;
 }
 result+=len;
 while(len>0){
-    b = a/i;
+    b = d/i;
     b = b%10;
     c = b + 48;
     write(1, &c, 1);
