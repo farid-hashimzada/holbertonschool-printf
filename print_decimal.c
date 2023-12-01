@@ -10,7 +10,7 @@
  */
 int print_decimal(int a){
 int i = 1, len = 1,result=0;
-int b = a;
+unsigned b = a;
 char c;
 if(a<0){
     char negative = '-';
