@@ -15,7 +15,7 @@ char c;
 if(a<0){
     char negative = '-';
     write(1, &negative, 1);
-    a = a * (-1);
+    b = a * (-1);
     b = b * (-1);
     result++;
 }
