@@ -16,6 +16,7 @@ int print_decimal(int a)
 if (a < 0)
 {
 	char negative = '-';
+
 	write(1, &negative, 1);
 	d = d * (-1);
 	b = b * (-1);
@@ -27,7 +28,7 @@ while ((b / i) >= 10)
 	len++;
 }
 	result += len;
-while(len > 0)
+while (len > 0)
 {
 	b = d / i;
 	b = b % 10;
