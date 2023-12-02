@@ -9,20 +9,22 @@
  */
 int print_decimal(int a)
 {
-	int result = 0;
+    int result = 0;
 
-	if (a < 0)
-	{
-		write(1, "-", 1);
-		result++;
-		a = -a;
-	}
+    if (a < 0)
+    {
+        write(1, "-", 1);
+        result++;
+        a = -a;
+    }
 
-	if (a / 10)
-		result += print_decimal(a / 10);
+    int i;
 
-	char c = a % 10 + '0';
-	write(1, &c, 1);
+    if (a / 10)
+        result += print_decimal(a / 10);
 
-	return (result + 1);
+    char c = a % 10 + '0';
+    write(1, &c, 1);
+
+    return (result + 1);
 }
