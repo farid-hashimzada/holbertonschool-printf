@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "main.h"
 
+
 /**
  * print_format - print
  * @format: list arguments
@@ -11,7 +12,7 @@
  * @ptr:va_list
  * Return: len
  */
-int print_format(char *format, int i)
+int print_format(const char *format, int i, va_list ptr)
 {
 	int len = 0;
 			if (format[i + 1] == 'c')
@@ -29,7 +30,7 @@ int print_format(char *format, int i)
 				len++;
 			}
 			else if (format[i + 1] == '\0')
-				continue;
+				len = 0;
 			else
 			{
 				_putchar('%');
