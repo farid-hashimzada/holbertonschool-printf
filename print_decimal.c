@@ -20,12 +20,12 @@ if (a < 0)
 	write(1, &negative, 1);
 	d = d * (-1);
 	b = b * (-1);
-	result++;
+	result ++;
 }
 while ((b / i) >= 10)
 {
 	i *= 10;
-	len++;
+	len ++;
 }
 	result += len;
 while (len > 0)
