@@ -5,11 +5,12 @@
 #include "main.h"
 
 /**
- * _printf - print
+ * print_format - print
  * @format: list arguments
+ * @i:i
+ * @ptr:va_list
  * Return: len
  */
-
 int print_format(char *format, int i)
 {
 	int len = 0;
