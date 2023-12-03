@@ -7,11 +7,8 @@
 /**
  * _printf - print
  * @format: list arguments
- *
- *
  * Return: len
  */
-
 int _printf(const char *format, ...)
 {
 	int i, len = 0;
